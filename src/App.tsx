@@ -1,24 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import { Map, Marker } from './lib';
+import './App.css'
+
+import markerIcon from './assets/smth.svg';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Map>
+        <Marker src={markerIcon} coords={[4071043.9470975567, 6545824.047756359]} name="Test" id="56" onClick={() => console.log('1')} />
+        <Marker src={markerIcon} coords={[4071243.9470975567, 6545824.047756359]} name="asdha" id="87" onClick={() => console.log('2')} />
+      </Map>
     </div>
   );
 }
